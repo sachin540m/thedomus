@@ -135,7 +135,36 @@
           Sorry, you need to enable JavaScript to visit this website.
         </div>
         </noscript>
-  <link rel="stylesheet" href="css/custom_header.css"></head>
+  <link rel="stylesheet" href="css/custom_header.css">
+<style>
+@media (max-width: 767px) {
+    .spotlightBanner,
+    .spotlightBanner .swiper-slide,
+    .spotlightBanner .bannerImgDiv {
+        height: 380px !important;
+        min-height: 380px !important;
+    }
+    .spotlightBanner .bannerImg {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    .spotlightBanner .bannerTextOverlay {
+        padding-top: 100px !important;
+        justify-content: center !important;
+    }
+    .spotlightBanner .bannerTextOverlay h1 {
+        font-size: 2.0rem !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 10px !important;
+    }
+    .spotlightBanner .bannerTextOverlay p {
+        font-size: 1.0rem !important;
+        line-height: 1.4 !important;
+    }
+}
+</style>
+
+</head>
   <body>
   <!--[if IE]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -283,11 +312,16 @@
 				<div class="swiper spotlightSliderDiv spotlightSliderActive">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<div class="bannerImgDiv">
+							<div class="bannerImgDiv" style="position: relative;">
 								<picture>
 								   <source media="(max-width: 767px )" srcset="images/Mobile_Malabar_430x715.jpg" sizes="" alt="" title="" loading="lazy" fetchpriority="high">
 								   <img src="images/Desktop_Malabar_1903x800.jpg" alt="" title="" class="img-fluid bannerImg aos-init aos-animate" data-aos="fade" loading="lazy" fetchpriority="high">
 								</picture>
+								<!-- Premium Text Overlay centered over image container -->
+								<div class="bannerTextOverlay d-flex flex-column justify-content-start align-items-center" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); color: #fff; text-align: center; padding: 140px 20px 20px; z-index: 2; display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
+									<h1 class="text-uppercase font-serif" style="font-size: 3.5rem; font-weight: 500; color: #ffffff; letter-spacing: 4px; text-shadow: 0 2px 10px rgba(0,0,0,0.65); margin-bottom: 20px;" data-aos="fade-up" data-aos-delay="100">The Domus Privé</h1>
+									<p class="font-sans" style="font-size: 1.3rem; max-width: 700px; color: #f8f9fa; text-shadow: 0 2px 5px rgba(0,0,0,0.65); line-height: 1.7; margin: 0;" data-aos="fade-up" data-aos-delay="200">A sanctuary of architectural purity. Bespoke residential spaces overlooking the Arabian Sea, crafted to endure.</p>
+								</div>
 							</div>
 							
 						</div>
