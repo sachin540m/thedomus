@@ -1,0 +1,294 @@
+/* Custom Header overrides for The Domus */
+
+/* Reduce padding on menu items to prevent overflow with more links */
+@media screen and (min-width: 991px) {
+  header .mainHeader .linksDiv > ul.linksUl > li {
+    padding-left: 30px !important;
+  }
+  
+  header .mainHeader .linksDiv > ul.staticlinksUl {
+    margin-left: 40px !important; /* Spacing between left menu and right enquire button */
+  }
+
+  header .mainHeader .linksDiv > ul.staticlinksUl > li {
+    padding-left: 0 !important;
+  }
+
+  /* Style the ENQUIRE button as a premium white pill button on desktop */
+  .enquire-pill-btn {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 8px 24px !important;
+    border-radius: 30px !important;
+    font-weight: 500 !important;
+    border: 1.5px solid #ffffff !important;
+    transition: all 0.3s ease-in-out !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: normal !important;
+  }
+
+  .enquire-pill-btn:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+  }
+
+  /* Remove any background icons inside the enquire button on desktop */
+  .enquire-pill-btn img {
+    display: none !important;
+  }
+}
+
+/* Ensure the navbar links have nice hover states */
+header .mainHeader .linksDiv > ul > li > a {
+  font-weight: 500 !important;
+  letter-spacing: 0.5px;
+  transition: color 0.25s ease-in-out;
+}
+
+header .mainHeader .linksDiv > ul > li > a:hover {
+  color: #c5a396 !important; /* Gold hover accent color */
+}
+
+/* Mobile responsive menu adaptations */
+@media screen and (max-width: 990px) {
+  header .mainHeader .linksDiv > ul > li {
+    padding-left: 0 !important;
+  }
+
+  .enquire-pill-btn {
+    width: 100% !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border-radius: 30px !important;
+    padding: 12px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    background-color: transparent !important;
+  }
+  
+  .enquire-pill-btn img {
+    margin-right: 8px !important;
+  }
+}
+
+/* Custom Footer Styling */
+footer {
+  background-color: #0b0c0d !important; /* Extremely dark black background */
+  padding: 60px 0 30px 0 !important;
+  color: #ffffff !important;
+  border-top: 1px solid #1a1b1d !important;
+}
+
+.custom-footer-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.custom-footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px;
+}
+
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-social-icons a {
+  color: #8a8b8c !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #2a2b2d;
+  transition: all 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+  color: #ffffff !important;
+  border-color: #ffffff;
+  background-color: #1a1b1d;
+}
+
+.custom-footer-col h4 {
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #ffffff !important;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 12px;
+}
+
+.footer-links-list li a {
+  color: #8a8b8c !important;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.25s ease;
+  display: inline-block;
+}
+
+.footer-links-list li a:hover {
+  color: #ffffff !important;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-details-list .brand-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #8a8b8c !important;
+  margin-bottom: 5px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #8a8b8c !important;
+  margin: 0;
+}
+
+.contact-item a {
+  color: #8a8b8c !important;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.contact-item a:hover {
+  color: #ffffff !important;
+}
+
+.contact-icon {
+  color: #8a8b8c;
+}
+
+.custom-footer-bottom {
+  border-top: 1px solid #1a1b1d;
+  margin-top: 50px;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.custom-footer-bottom p {
+  color: #5a5b5c !important;
+  font-size: 13px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-footer-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* Center and premium styling for the simplified single-column projects dropdown */
+.linksListWithSearch.justify-content-center {
+  justify-content: center !important;
+}
+
+.linksListWithSearch .container {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+#subHeader.text-center {
+  text-align: center !important;
+}
+
+#subHeader.text-center ul {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+  display: inline-block !important;
+}
+
+#subHeader.text-center ul li {
+  margin: 12px 0 !important;
+}
+
+#subHeader.text-center ul li a {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #8a8b8c !important;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+#subHeader.text-center ul li a:hover {
+  color: #ffffff !important;
+}
+
+#subHeader.text-center h6 {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  letter-spacing: 1.5px !important;
+  margin-bottom: 25px !important;
+  text-transform: uppercase !important;
+}
+
+/* Custom section spacing collapse for Life at The Domus page */
+.expImpactSec {
+  padding-bottom: 0px !important;
+}
+
+.ourPrideSliderDiv {
+  padding-bottom: 20px !important;
+}
+
+.socialImpactSec {
+  padding-top: 30px !important;
+  padding-bottom: 45px !important;
+}
+
+.recognitionSec {
+  padding-top: 35px !important;
+  padding-bottom: 45px !important;
+}
+
+.esgSec {
+  padding-top: 40px !important;
+  padding-bottom: 30px !important;
+}
+
+
+
