@@ -853,4 +853,22 @@ preloadLink.onload = function() {
 	
 </script>
  
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('.spotlightBanner video');
+    if (video) {
+        // Ensure muted is set programmatically to satisfy browser autoplay policies
+        video.muted = true;
+        video.play().catch(function(error) {
+            console.log("Autoplay prevented or loading, waiting for interaction...", error);
+            // Fallback: Play on first click anywhere on the page
+            document.body.addEventListener('click', function() {
+                video.play();
+            }, { once: true });
+        });
+    }
+});
+</script>
+
 </body></html>
