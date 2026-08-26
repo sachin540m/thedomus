@@ -416,9 +416,7 @@ header .mainHeader .linksDiv>ul>li .innerMenuDiv .innerLinksList .linksListWithS
 
 /* Desktop megamenu hover trigger and transition animations */
 @media screen and (min-width: 991px) {
-    header .mainHeader .linksDiv > ul > li.innerMenu:hover .innerMenuDiv {
-        display: block !important;
-    }
+
     header .mainHeader .linksDiv > ul > li.innerMenu:hover .innerLinksList {
         transform: translateY(0) !important;
         opacity: 1 !important;
