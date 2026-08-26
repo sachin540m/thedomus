@@ -91,22 +91,18 @@ jQuery(document).ready(function () {
         lastScrollTop = st;
     }
 
-    jQuery(document).on('click', 'header .mainHeader .linksDiv>ul>li.innerMenu>a', function (e) {
-        if (window.innerWidth <= 990) {
-            if (jQuery(this).parent('li').hasClass('active')) {
-                jQuery('html').removeClass('menuOpen overflowHidden');
-                jQuery(this).parent('li').removeClass('active');
-                jQuery(this).next('.innerMenuDiv').slideUp();
+    jQuery(document).on('click', 'header .mainHeader .linksDiv>ul>li.innerMenu>a', function () {
+        if (jQuery(this).parent('li').hasClass('active')) {
+            jQuery('html').removeClass('menuOpen overflowHidden');
+            jQuery(this).parent('li').removeClass('active');
+            jQuery(this).next('.innerMenuDiv').slideUp();
 
-            } else {
-                jQuery('html').addClass('menuOpen overflowHidden');
-                jQuery(this).parents('.linksDiv').find('li').removeClass('active');
-                jQuery(this).parent('li').addClass('active');
-                jQuery(this).parents('.linksDiv').find('.innerMenuDiv').slideUp();
-                jQuery(this).next('.innerMenuDiv').slideDown();
-            }
         } else {
-            e.preventDefault();
+            jQuery('html').addClass('menuOpen overflowHidden');
+            jQuery(this).parents('.linksDiv').find('li').removeClass('active');
+            jQuery(this).parent('li').addClass('active');
+            jQuery(this).parents('.linksDiv').find('.innerMenuDiv').slideUp();
+            jQuery(this).next('.innerMenuDiv').slideDown();
         }
     });
     jQuery(document).on('click', 'header .mainHeader .linksDiv>ul>li .innerMenuDiv .innerLinksList .closedMenu', function () {
@@ -1345,30 +1341,4 @@ if(validNz){
 		   }
 		}); // Ajax />
     } // valid Form      
-
-    /* Custom Desktop Hover Megamenu with delegated events to handle dynamic elements smoothly */
-    var hoverTimeout;
-    jQuery(document).on('mouseenter', '.innerMenu', function() {
-        if (window.innerWidth > 990) {
-            clearTimeout(hoverTimeout);
-            var $li = jQuery(this);
-            if (!$li.hasClass('active')) {
-                jQuery('html').addClass('menuOpen overflowHidden');
-                jQuery('.innerMenu').removeClass('active');
-                $li.addClass('active');
-                $li.find('.innerMenuDiv').stop(true, true).slideDown(400);
-            }
-        }
-    });
-    
-    jQuery(document).on('mouseleave', '.innerMenu', function() {
-        if (window.innerWidth > 990) {
-            var $li = jQuery(this);
-            hoverTimeout = setTimeout(function() {
-                jQuery('html').removeClass('menuOpen overflowHidden');
-                $li.removeClass('active');
-                $li.find('.innerMenuDiv').stop(true, true).slideUp(300);
-            }, 200); // 200ms debounce delay
-        }
-    });
 }); 
