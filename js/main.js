@@ -132,6 +132,22 @@ jQuery(document).ready(function () {
                 jQuery(this).next('ul').slideDown();
             }
         });
+        jQuery(document).on('click', 'header .mainHeader .logoDiv .mobMenu .burgerMenu', function () {
+            if (jQuery('html').hasClass('mobMenuOpen')) {
+                jQuery('html').removeClass('mobMenuOpen overflowHidden mobSearchOpen');
+                jQuery('header .mainHeader .linksDiv>ul>li .innerMenuDiv .innerLinksList .closedMenu').click();
+            } else {
+                jQuery('html').addClass('mobMenuOpen overflowHidden mobSearchOpen');
+            }
+        });
+        jQuery(document).on('click', 'header .mainHeader .logoDiv .mobMenu .mobSearch', function () {
+            if (jQuery('html').hasClass('mobSearchOpen')) {
+                jQuery('html').removeClass('mobSearchOpen overflowHidden mobMenuOpen');
+                jQuery('header .mainHeader .linksDiv>ul>li .innerMenuDiv .innerLinksList .closedMenu').click();
+            } else {
+                jQuery('html').addClass('mobSearchOpen overflowHidden');
+            }
+        });
         jQuery(document).on('click', '.projectFilterDiv .mobFilter', function () {
             jQuery('html').addClass('mobFilterOpen overflowHidden');
             setTimeout(() => {
@@ -144,25 +160,8 @@ jQuery(document).ready(function () {
         });
     } else {
 
-    }
 
-    // Burger menu and Search toggles registered unconditionally on all screen sizes
-    jQuery(document).on('click', 'header .mainHeader .logoDiv .mobMenu .burgerMenu', function () {
-        if (jQuery('html').hasClass('mobMenuOpen')) {
-            jQuery('html').removeClass('mobMenuOpen overflowHidden mobSearchOpen');
-            jQuery('header .mainHeader .linksDiv>ul>li .innerMenuDiv .innerLinksList .closedMenu').click();
-        } else {
-            jQuery('html').addClass('mobMenuOpen overflowHidden mobSearchOpen');
-        }
-    });
-    jQuery(document).on('click', 'header .mainHeader .logoDiv .mobMenu .mobSearch', function () {
-        if (jQuery('html').hasClass('mobSearchOpen')) {
-            jQuery('html').removeClass('mobSearchOpen overflowHidden mobMenuOpen');
-            jQuery('header .mainHeader .linksDiv>ul>li .innerMenuDiv .innerLinksList .closedMenu').click();
-        } else {
-            jQuery('html').addClass('mobSearchOpen overflowHidden');
-        }
-    });
+    }
 
     //jQuery(document).on('click', 'footer .mainFooterMenu .downArrow', function () { {Oldfunction}
 	

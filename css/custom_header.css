@@ -292,3 +292,136 @@ footer {
 
 
 
+
+/* Interactive Megamenu Dropdown Styles */
+.linksListWithSearch .container {
+    max-width: 1200px !important;
+    position: relative;
+}
+
+.linksListWithSearch .closedMenu {
+    position: absolute !important;
+    top: 15px !important;
+    right: 20px !important;
+    cursor: pointer !important;
+    z-index: 999 !important;
+}
+
+.projHoverLink:hover {
+    color: #c5a396 !important;
+    transform: translateX(5px);
+}
+
+@media screen and (max-width: 990px) {
+    .linksListWithSearch .row {
+        flex-direction: column !important;
+        padding: 20px !important;
+        max-width: 100% !important;
+    }
+    
+    .innerLinksUl {
+        width: 100% !important;
+    }
+    
+    .projectHoverList {
+        text-align: center !important;
+    }
+    
+    .projectHoverList li {
+        text-align: center !important;
+    }
+    
+    .projHoverLink {
+        font-size: 18px !important;
+        text-align: center !important;
+    }
+}
+
+/* Remove default line-through hover line from megamenu links */
+.projHoverLink::after {
+    display: none !important;
+}
+
+header .mainHeader .linksDiv>ul>li .innerMenuDiv .innerLinksList .linksListWithSearch .innerLinksUl ul li a.projHoverLink::after {
+    display: none !important;
+}
+
+/* Responsive Megamenu Card Classes */
+@media screen and (min-width: 991px) {
+    .megamenu-row {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 1100px !important;
+        background: #ffffff !important;
+        border-radius: 12px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+        padding: 40px !important;
+        margin: 0 auto !important;
+    }
+    .projHoverLink {
+        color: #0b0c0d !important;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .megamenu-row {
+        display: block !important;
+        width: 100% !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+    
+    /* Force projects sub-list to be open by default in mobile accordion */
+    header .mainHeader .linksDiv>ul>li .innerMenuDiv .innerLinksList .linksListWithSearch .innerLinksUl>ul {
+        display: block !important;
+        padding: 0 !important;
+        margin-top: 15px !important;
+    }
+    
+    .projHoverLink {
+        color: #ffffff !important;
+        font-size: 18px !important;
+        text-align: left !important;
+        padding: 8px 0 !important;
+    }
+    
+    /* Ensure left column container is full width and clean on mobile */
+    .innerLinksUl {
+        width: 100% !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+    
+    .innerLinksUl h6 {
+        border-top: none !important;
+        border-bottom: none !important;
+        color: #ffffff !important;
+        font-size: 15px !important;
+        margin-bottom: 10px !important;
+        text-align: left !important;
+    }
+    
+    /* Adjust location text size under links for mobile */
+    .projectHoverList span {
+        font-size: 12px !important;
+        color: #8a8b8c !important;
+        text-align: left !important;
+        display: block;
+        margin-bottom: 15px !important;
+    }
+}
+
+/* Desktop megamenu hover trigger and transition animations */
+@media screen and (min-width: 991px) {
+    header .mainHeader .linksDiv > ul > li.innerMenu:hover .innerMenuDiv {
+        display: block !important;
+    }
+    header .mainHeader .linksDiv > ul > li.innerMenu:hover .innerLinksList {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+    }
+}
