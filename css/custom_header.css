@@ -423,3 +423,26 @@ header .mainHeader .linksDiv>ul>li .innerMenuDiv .innerLinksList .linksListWithS
         transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
     }
 }
+
+/* Project Text Logo Branding Styles */
+.brand_logo_title {
+    font-family: "Cormorant Garamond", serif !important;
+    font-size: 36px !important;
+    font-weight: 500 !important;
+    letter-spacing: 5px !important;
+    text-transform: uppercase !important;
+    color: #ac8d80 !important;
+    text-align: center !important;
+    margin: 30px auto 25px auto !important;
+    border-bottom: 1px solid rgba(172, 141, 128, 0.3);
+    display: inline-block;
+    padding-bottom: 5px;
+    width: fit-content;
+}
+@media screen and (max-width: 767px) {
+    .brand_logo_title {
+        font-size: 28px !important;
+        letter-spacing: 3px !important;
+        margin: 20px auto 15px auto !important;
+    }
+}
