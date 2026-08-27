@@ -510,7 +510,7 @@ jQuery(document).ready(function () {
 	
 	// active Tab: Quarter 1, 2, 3, 4 
 	if (jQuery(".tabSwiperSlider").length > 0) {
-		//if (window.location.href === 'https://www.lodhagroup.com/investor-relations/financials') {
+		//if (window.location.href === 'https://www.thedomus.in/investor-relations/financials') {
          if (window.location.pathname === '/investor-relations/financials') {
 			var tabSwiperSliderrVar;
 			setTimeout(() => {

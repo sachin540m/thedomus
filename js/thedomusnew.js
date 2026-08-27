@@ -1,6 +1,6 @@
 /**
  * @file
- * Lodha New Custom Theme behaviors.
+ * The Domus New Custom Theme behaviors.
  */
  
 /* ------------------ Webengage Login function call on All project page with leadid ------------------ */
@@ -23,9 +23,9 @@ var base_url = window.location.origin;
 
 jQuery(document).ready(function ($) {	
 	
-	$("a[href*='/lodha-luxury/lodha-avalon-juhu']").attr("href", function(index, originalHref) {
+	$("a[href*='/the-domus-luxury/the-domus-avalon-juhu']").attr("href", function(index, originalHref) {
 		// Replace "old-part" with "new-part" in the URL
-		var newUrl = originalHref.replace("/lodha-luxury/lodha-avalon-juhu", "/projects/luxury-property-in-mumbai/lodha-avalon-juhu"+window.location.search);
+		var newUrl = originalHref.replace("/the-domus-luxury/the-domus-avalon-juhu", "/projects/luxury-property-in-mumbai/the-domus-avalon-juhu"+window.location.search);
 		return newUrl;
 	});	
 	
@@ -85,7 +85,7 @@ jQuery(document).ready(function ($) {
 	jQuery('#edit-consent').prop('checked', true);
 	
 	jQuery(".consenttext").html();
-	jQuery(".consenttext").html('<p>By checking this box, you agree to our <a class="colorGold" href="https://www.lodhagroup.com/privacy-policy" target="_blank">Privacy Policy</a> and consent to be contacted with relevant updates.</p>');
+	jQuery(".consenttext").html('<p>By checking this box, you agree to our <a class="colorGold" href="https://www.thedomus.in/privacy-policy" target="_blank">Privacy Policy</a> and consent to be contacted with relevant updates.</p>');
 	
 	var localname = localStorage.getItem("name");
 	var localemail = localStorage.getItem("email");
@@ -261,7 +261,7 @@ jQuery(document).ready(function ($) {
     $('#departmentlst').empty();
     $('.form-item-depertment').remove();
     var cntryOptionsdept = '';
-    var cntryCodesdept = '/themes/lodhanew/js/department.json';
+    var cntryCodesdept = '/themes/thedomusnew/js/department.json';
     cntryOptionsdept += '<li><label for="chk1" data-title="Test1">Test1</label></li><li><label for="chk1" data-title="Test2">Test2</label></li><li><label for="chk1" data-title="Test3">Test3</label></li>';
 	//jQuery.getJSON(cntryCodesdept, function (data) {
 			//console.log(data);
@@ -998,7 +998,7 @@ jQuery(document).on('click', '#departmentlst li', function () {
 		if(luxProp != undefined && luxProp[4].toLowerCase().includes('luxury')){
 			jQuery("ul.staticlinksUl").remove();
 		}else{
-			jQuery('#wpheader').html('<a href="https://wa.me/917718893537?text=Hi" tabindex="0" role="link" aria-label="Chat" target="_blank" class="wpclick" onclick="chatclick()"><img src="https://www.lodhagroup.com/themes/lodhanew/images/svg/chat.svg" alt="Chat" class="img-fluid"> Chat</a>');
+			jQuery('#wpheader').html('<a href="https://wa.me/917718893537?text=Hi" tabindex="0" role="link" aria-label="Chat" target="_blank" class="wpclick" onclick="chatclick()"><img src="https://www.thedomus.in/themes/thedomusnew/images/svg/chat.svg" alt="Chat" class="img-fluid"> Chat</a>');
 		}	
 	}, 1000);
 
@@ -2404,7 +2404,7 @@ jQuery(document).ready(function($) {
 
 	'use strict';
 
-	Drupal.behaviors.lodhanew = {
+	Drupal.behaviors.thedomusnew = {
 		attach(context, settings) {
 
 			//console.log('It works!');
@@ -2836,7 +2836,7 @@ $(document).ready(function() {
 
 window.onload = function() {
 /* /* /* /* /* /* Retail page : /retail  * / * / * / * / * / */
-/* <a href="https://uat-beta.lodhagroup.in/projects/commercial-property-in-mumbai/lodha-signet-kalyan-shil-road" id="projectclick" data-category="Commercial and Retail" data-typology="" data-city="Thane" data-title="Lodha Signet Kalyan Shil road" data-img="/sites/default/files/styles/280x350/public/thumbnail/Spotlight_Lodha-Signet%2C-Kalyan-Shil-Road-D.jpg.webp?itok=uCbOmuSs" data-projectid="a094G00003CLlwE" data-possesion="Under Construction" data-budget="">
+/* <a href="https://uat-beta.thedomus.in/projects/commercial-property-in-mumbai/the-domus-signet-kalyan-shil-road" id="projectclick" data-category="Commercial and Retail" data-typology="" data-city="Thane" data-title="The Domus Signet Kalyan Shil road" data-img="/sites/default/files/styles/280x350/public/thumbnail/Spotlight_The Domus-Signet%2C-Kalyan-Shil-Road-D.jpg.webp?itok=uCbOmuSs" data-projectid="a094G00003CLlwE" data-possesion="Under Construction" data-budget="">
 
 //var hrefValue = $('#projectclick').attr('data-projectid');
 var selProject = $('a[data-projectid="a094G00003CLlwE"]');
@@ -2848,28 +2848,28 @@ selProject.attr('href', hrefValue+'/retail');
 //$("a[data-projectid$='a094G00003CLlwE'").attr('href', hrefValue+'/retail');  */
 
 function retailLink(){
-	// Lodha Signet Kalyan Shil road | Palava
+	// The Domus Signet Kalyan Shil road | Palava
 	var a094G00003CLlwE = $('a[data-projectid="a094G00003CLlwE"]');
 	var hrefValue1 = a094G00003CLlwE.attr('href');
 	if(hrefValue1.includes("/retail") == false){
 		a094G00003CLlwE.attr('href', hrefValue1+'/retail');
 	}
 	
-	// One Lodha Place | Lower Parel
+	// One The Domus Place | Lower Parel
 	var a09D000002FvGrz = $('a[data-projectid="a09D000002FvGrz"]');
 	var hrefValue2 = a09D000002FvGrz.attr('href');
 	if(hrefValue2.includes("/retail") == false){
 		a09D000002FvGrz.attr('href', hrefValue2+'/retail');
 	}
 	
-	// Lodha iThink | Palava Business District 
+	// The Domus iThink | Palava Business District 
 	var a09D000002NL4K9 = $('a[data-projectid="a09D000002NL4K9"]');
 	var hrefValue3 = a09D000002NL4K9.attr('href');
 	if(hrefValue3.includes("/retail") == false){
 		a09D000002NL4K9.attr('href', hrefValue3+'/retail');
 	}
 	 
-	// Lodha Signet Lower Parel | Lower Parel 
+	// The Domus Signet Lower Parel | Lower Parel 
 	var a094G0000368XCf = $('a[data-projectid="a094G0000368XCf"]');
 	var hrefValue4 = a094G0000368XCf.attr('href');
 	if(hrefValue4.includes("/retail") == false){

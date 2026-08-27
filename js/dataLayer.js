@@ -196,15 +196,15 @@ function mchatclick() {
             City: a,
         });
 }
-function lodhaclick() {
+function the-domusclick() {
     jQuery(location).attr("href");
     (window.dataLayer = window.dataLayer || []),
-        window.dataLayer.push({ event: "Lodha Icon click", page_url: window.location.href });
+        window.dataLayer.push({ event: "The Domus Icon click", page_url: window.location.href });
 }
-function lodhaluxuryclick() {
+function the-domusluxuryclick() {
     jQuery(location).attr("href");
     (window.dataLayer = window.dataLayer || []),
-        window.dataLayer.push({ event: "Lodha Luxury click", page_url: window.location.href });
+        window.dataLayer.push({ event: "The Domus Luxury click", page_url: window.location.href });
 }
 
 function enquireclick(){
@@ -483,7 +483,7 @@ jQuery(function() {
 		(window.dataLayer = window.dataLayer || []),
 			window.dataLayer.push({ event: "Video_view", "Project Name": e, "Project Id": t, Video: a });
 	}),
-	jQuery(document).on("click", "#lodhapalavaclick", function () {
+	jQuery(document).on("click", "#the-domuspalavaclick", function () {
 		jQuery(location).attr("href");
 		(window.dataLayer = window.dataLayer || []),
 			window.dataLayer.push({ event: "Palava City click", page_url: window.location.href });
@@ -739,14 +739,14 @@ jQuery(function() {
 		window.dataLayer = window.dataLayer || [];
 		window.dataLayer.push({
 			'event': "header_interaction",	
-			'click_text' : "LODHA Logo",
+			'click_text' : "THE DOMUS Logo",
 			'link_header': "",
 			'link_sub_header': "",
 			'source_page_url': sourceURL,
 			'destination_page_url': destinationURL.replace(window.location.origin, "")
 		});
 		console.log(window.dataLayer); //return false;
-	}); // Header: LODHA Logo Left
+	}); // Header: THE DOMUS Logo Left
 
 	/* jQuery("#headerstyle").on("click",".staticlinksUl a.enquire.enquireForm",function () {
 		var destinationURL = jQuery(this).attr('href');
@@ -1213,7 +1213,7 @@ jQuery(function() {
 		window.dataLayer = window.dataLayer || [];
 		window.dataLayer.push({
 			'event': "footer_interaction",
-			'click_text' : "LODHA Logo",
+			'click_text' : "THE DOMUS Logo",
 			'link_header': "Footer",
 			'source_page_url': sourceURL,
 			'destination_page_url': destinationURL.replace(window.location.origin, "")
@@ -2133,7 +2133,7 @@ jQuery("section.listDetailsSec").on("click","a.goldenLineBtn, p a.a",function ()
 		console.log(window.dataLayer); //return false;
 	}); // page: /thankyou > inner pages
 
-	if(window.location.pathname == '/investor-relations' || window.location.pathname == '/hr/why-lodha' || window.location.pathname == '/hr/life-at-lodha' || window.location.pathname == '/hr/explore-career' || window.location.pathname == '/hr/campus-program'){
+	if(window.location.pathname == '/investor-relations' || window.location.pathname == '/hr/why-the-domus' || window.location.pathname == '/hr/life-at-the-domus' || window.location.pathname == '/hr/explore-career' || window.location.pathname == '/hr/campus-program'){
 		jQuery("section.secodaryNav").on("click",".seconNavSlider ul li a",function () {
 			let clickText = jQuery(this).text().trim();
 			let destinationURL = jQuery(this).attr('href');
